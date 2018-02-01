@@ -8,10 +8,11 @@ This is a unnoficial version of Whatsap for linux.
     curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
     sudo apt-get install -y nodejs
 
-## Install Electron y Packager | Instalar Electron y Packager
+## Modules | Modulos
 
     npm install electron --save-dev
     npm install electron-packager --save-dev
+    npm install --save-dev electron-installer-debian
     
 ## For Compile | Para compilar
     Windows (32 bits): npm run build-win32
