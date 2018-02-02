@@ -1,0 +1,23 @@
+{
+  "name": "WhatsApp-Linux",
+  "version": "1.0.0",
+  "description": "Whatsapp for linux made in electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-linux64": "electron-packager .  WhatsApp-Linux --overwrite --asar=true --platform=linux --arch=x64 --icon=icon.png --prune=true --out=release-builds  --version-string.ProductName='Whatsapp for Linux'",
+    "build-linux32": "electron-packager .  WhatsApp-Linux --overwrite --asar=true --platform=linux --arch=ia32 --icon=icon.png --prune=true --out=release-builds  --version-string.ProductName='Whatsapp for Linux'",
+    "deb64": "electron-installer-debian --src release-builds/WhatsApp-Linux-linux-x64/ --arch amd64 --config debian.json",
+    "deb32": "electron-installer-debian --src release-builds/WhatsApp-Linux-linux-ia32/ --arch ia32 --config debian.json",
+    "rpm64": "electron-installer-redhat --src release-builds/WhatsApp-Linux-linux-x64/ --arch x86_64 --config config.json"
+  },
+  "repository": "https://github.com/Miguel-Gen/Whatsapp-For-Linux",
+  "author": "WhatsApp For Linux",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^1.8.1",
+    "electron-installer-debian": "^0.8.0",
+    "electron-installer-redhat": "^0.5.0",
+    "electron-packager": "^10.1.2"
+  }
+}

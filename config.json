@@ -1,0 +1,7 @@
+{
+  "dest": "release_builds/",
+  "icon": "assets/png/icon.png",
+  "categories": [
+    "Utility"
+  ]
+}
